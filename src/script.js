@@ -16,7 +16,7 @@ const contactBook = {
       name: "Isak Gran",
       phone: "070-1112223",
       group: "arbete",
-    },
+    }, 
     {
       name: "Juan López",
       phone: "070-5556667",
@@ -26,20 +26,19 @@ const contactBook = {
 };
   
   // Ange en grupp
-  let groupToShow;
+  let groupToShow = "familj";
   
 
 
 
-function showContacts(contactBook, groupToShow) { // Rör ej denna kod
+ function showContacts(contactBook, groupToShow) { // Rör ej denna kod
 
-
-
-    // Loopar igenom alla kontakter och jämför grupp
-   
-    return  // här ska sträng med namn och tekefonnummer visas i form av string interpolation
-
-
+  
+  for (contact of contactBook.contacts){
+    if (contact.group === groupToShow){
+      return `Namn: ${contact.name}, Telefon: ${contact.phone}`; 
+    }
+  } 
 }
 
 
